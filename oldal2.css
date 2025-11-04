@@ -1,0 +1,57 @@
+/* ---- Menü (GRID alapú) ---- */
+nav {
+    background-color: #333;
+}
+
+nav ul {
+    list-style: none;
+    /* ne legyen felsorolásjel */
+    margin: 0;
+    padding: 0;
+    display: grid;
+    /* GRID használata */
+    grid-auto-flow: row;
+    /* egymás mellé kerüljenek */
+    justify-content: left;
+    gap: 20px;
+    /* távolság a menüpontok között */
+    transition: background-color 0.3s ease;
+}
+
+nav a {
+    text-decoration: none;
+    /* ne legyen aláhúzva */
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+/* Hover esemény — az UL háttérszíne és betűszín is változik */
+nav li:hover {
+    background-color: #1d1b1b;
+}
+
+nav li:hover a {
+    color: rgb(252, 144, 4);
+}
+
+/* ---- Cikkdobozok (GRID alapú) ---- */
+article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+
+    gap: 20px;
+    justify-content: center;
+
+    align-items: center;
+    direction: rtl;
+ 
+}
+
+
+.cikk {
+    direction: ltr;
+    /* a tartalom maradjon normális irányban */
+}
