@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.2em
+}
+
+main,
+main>*,
+article>div {
+    border: 1px solid gray;
+    padding: 10pt;
+}
+
+main {
+    width: 90%;
+    max-width: 900px;
+    margin:auto;
+}
+p {
+    padding:10pt 0 ;
+    text-align: justify;
+}
+#active {
+    background-color: brown;
+}
+
+.cikk {
+
+    background-color: #f3f3f3;
+}
+
+.cikk img {
+    width: 100%;
+    border-radius: 5px;
+}
