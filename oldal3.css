@@ -1,0 +1,69 @@
+article {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.cikk {
+    display: grid;
+    grid-template-rows: 250px 100px auto;
+}
+
+.cikk .kep {
+    order: -1; /* a kép kerüljön az elejére */
+}
+
+main {
+    display: grid;
+    grid-template-areas: 
+        "h h h"
+        "as ar n"
+        "f f f";
+    grid-template-columns: 150px 1fr 150px; /* cikk rugalmas, aside fix szélesség */
+    gap: 10px; /* sorok és oszlopok közti távolság */
+}
+
+header {
+    grid-area: h;
+}
+
+nav {
+    grid-area: n;
+}
+
+article {
+    grid-area: ar;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+aside {
+    grid-area: as;
+    font-size: 15px;
+}
+
+footer {
+    grid-area: f;
+}
+
+nav ul {
+    grid-template-columns: 1fr;
+    grid-auto-flow: row;
+}
+
+@media screen and (max-width: 600px) {
+    main {
+    display: grid;
+    grid-template-areas: 
+        "h"
+        "n"
+        "as"
+        "ar"
+        "f";
+    grid-template-columns: 1fr; /* cikk rugalmas, aside fix szélesség */
+    gap: 10px; /* sorok és oszlopok közti távolság */
+}
+}
